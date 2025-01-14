@@ -231,9 +231,9 @@ class InputParser():
         shared = ['0'] * 8
         lower = ['0'] * 8
         # Upper Byte
-        if controller_input["Y"]:
-            upper[7] = '1'
         if controller_input["X"]:
+            upper[7] = '1'
+        if controller_input["Y"]:
             upper[6] = '1'
         if controller_input["B"]:
             upper[5] = '1'
@@ -377,9 +377,9 @@ class InputParser():
         for i in range(0, len(macro_input)-1):
             button = macro_input[i]
             # Upper Byte
-            if button == "Y":
+            if button == "X":
                 upper[7] = '1'
-            elif button == "X":
+            elif button == "Y":
                 upper[6] = '1'
             elif button == "B":
                 upper[5] = '1'
